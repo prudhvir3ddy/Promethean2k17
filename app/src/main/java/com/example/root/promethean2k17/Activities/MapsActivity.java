@@ -1,8 +1,9 @@
-package com.example.root.promethean2k17;
+package com.example.root.promethean2k17.Activities;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.root.promethean2k17.R;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;

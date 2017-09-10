@@ -1,4 +1,4 @@
-package com.example.root.promethean2k17;
+package com.example.root.promethean2k17.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,13 +14,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.root.promethean2k17.R;
+import com.example.root.promethean2k17.configs.Sharedprefs;
+import com.facebook.accountkit.AccountKit;
+
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+Sharedprefs sharedprefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedprefs=new Sharedprefs(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -68,8 +74,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.logout) {
+
+            AccountKit.logOut();
+            sharedprefs.clearlogin();
+            startActivity(new Intent(MainActivity.this,Login.class));
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
