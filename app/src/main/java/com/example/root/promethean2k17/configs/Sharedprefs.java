@@ -13,6 +13,8 @@ public class Sharedprefs {
     public static final String myprefs = "myprefs";
     public static final String LogedInUserName = "UserName";
     public static final String LogedInEmail = "Email";
+    public static final String LogedInCollegeName= "Email";
+
     public static final String LogedInKey = "Key";
     public static final String ResetEmail = "Email";
     public static final String firstopen=null;
@@ -35,12 +37,14 @@ public class Sharedprefs {
         editor.putString(firstopen,"true");
         editor.commit();
     }
-    public void saveprefs(String UserName,String Email,String Key){
+    public void saveprefs(String UserName,String Email,String Key,String CollegeName){
         editor.putString(LogedInUserName, UserName);
         editor.putString(LogedInEmail, Email);
         editor.putString(LogedInKey,Key);
+        editor.putString(LogedInCollegeName,CollegeName);
         editor.commit();
     }
+
 public void setlogin()
 {
     editor.putString(checklog,"true");
@@ -57,9 +61,11 @@ public String getlogin(){
     public void clearprefs() {
         editor.putString(LogedInUserName, null);
         editor.putString(LogedInEmail, null);
+        editor.putString(LogedInCollegeName,null);
         editor.putString(LogedInKey,null);
         editor.commit();
     }
+    public String getLogedInCollegeName(){return sharedpreferences.getString(LogedInCollegeName,null);}
     public  String getEmail() {
         return sharedpreferences.getString(LogedInEmail,null);
     }
@@ -82,7 +88,15 @@ public String getlogin(){
         editor.commit();
     }
 
-
+public void setPhone(String phone)
+{
+    editor.putString(Phone,phone);
+    editor.commit();
+}
+public String getPhone()
+{
+    return sharedpreferences.getString(Phone,null);
+}
     public  String getLogedInUserName() {
         return sharedpreferences.getString(LogedInUserName,null);
     }

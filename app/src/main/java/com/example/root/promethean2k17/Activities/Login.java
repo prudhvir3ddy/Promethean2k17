@@ -7,19 +7,32 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.androidnetworking.AndroidNetworking;
+
 import com.example.root.promethean2k17.configs.Sharedprefs;
+import com.example.root.promethean2k17.configs.urls;
+import com.facebook.accountkit.Account;
 import com.facebook.accountkit.AccountKit;
 import com.facebook.accountkit.AccessToken;
 
 import com.example.root.promethean2k17.R;
+import com.facebook.accountkit.AccountKitCallback;
+import com.facebook.accountkit.AccountKitError;
 import com.facebook.accountkit.AccountKitLoginResult;
+import com.facebook.accountkit.PhoneNumber;
 import com.facebook.accountkit.ui.AccountKitActivity;
 import com.facebook.accountkit.ui.AccountKitConfiguration;
 import com.facebook.accountkit.ui.LoginType;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.i18n.phonenumbers.NumberParseException;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
+import com.google.i18n.phonenumbers.Phonenumber;
+
+import java.util.Locale;
 
 public class Login extends AppCompatActivity {
     public static int APP_REQUEST_CODE = 11;
+
     Sharedprefs sharedprefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +75,11 @@ public class Login extends AppCompatActivity {
 
 
 
-    public void emailLogin(final View view) {
-        AppEventsLogger logger = AppEventsLogger.newLogger(this);
-        logger.logEvent("onEmailLogin");
-        onlogin(LoginType.EMAIL);
-    }
+//    public void emailLogin(final View view) {
+//        AppEventsLogger logger = AppEventsLogger.newLogger(this);
+//        logger.logEvent("onEmailLogin");
+//        onlogin(LoginType.EMAIL);
+//    }
 
 
     public void onlogin(LoginType loginType)
@@ -84,9 +97,14 @@ public class Login extends AppCompatActivity {
         startActivityForResult(intent, APP_REQUEST_CODE);
     }
 
-    public void launchAccountActivity()
-{
-startActivity(new Intent(Login.this,MainActivity.class));
-    finish();
-}
+    public void launchAccountActivity() {
+
+        startActivity(new Intent(getApplicationContext(),Check.class));
+
+
+    }
+
+
+
+
 }

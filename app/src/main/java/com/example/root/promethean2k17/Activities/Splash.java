@@ -17,14 +17,20 @@ Sharedprefs sharedprefs;
         if(sharedprefs.getopened()==null)
         {
             startActivity(new Intent(Splash.this,Intro.class));
+            finish();
         }
         else if (sharedprefs.getlogin()==null){
-            //startActivity(new Intent(getApplicationContext(),Home.class));
+
             startActivity(new Intent(getApplicationContext(),Login.class));
             finish();
         }
+        else if(sharedprefs.getLogedInUserName()==null)
+        {
+            startActivity(new Intent(getApplicationContext(),Check.class));
+            finish();
+        }
  else {
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(),Home.class));
             finish();
         }
 
