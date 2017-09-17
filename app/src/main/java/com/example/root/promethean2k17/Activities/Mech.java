@@ -30,9 +30,13 @@ public class Mech extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.mech_recyclerview);
 
         ArrayList<Mech_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Mech_Model(R.drawable.cse));
-        arrayList.add(new Mech_Model(R.drawable.eee));
-        arrayList.add(new Mech_Model(R.drawable.ece));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model(R.drawable.mech));
         arrayList.add(new Mech_Model(R.drawable.mech));
         adapter=new Mech_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -45,17 +49,51 @@ public class Mech extends AppCompatActivity {
                 switch (position){
 
                     case 0:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i1=new Intent(getApplicationContext(),Event_Registration.class);
+                        i1.putExtra("name","MechanoGraspWorkshop");
+                        startActivity(i1);
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i2=new Intent(getApplicationContext(),Event_Registration.class);
+                        i2.putExtra("name","AutoMobileWorkshop");
+                        startActivity(i2);
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i9=new Intent(getApplicationContext(),Event_Registration.class);
+                        i9.putExtra("name","PaperPresentationMech");
+                        startActivity(i9);
                         break;
                     case 3:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i3=new Intent(getApplicationContext(),Event_Registration.class);
+                        i3.putExtra("name","PosterPresentationMech");
+                        startActivity(i3);
                         break;
+                    case 4:
+                        Intent i4=new Intent(getApplicationContext(),Event_Registration.class);
+                        i4.putExtra("name","TechQuizMech");
+                        startActivity(i4);
+                        break;
+                    case 5:
+                        Intent i5=new Intent(getApplicationContext(),Event_Registration.class);
+                        i5.putExtra("name","ProjectExpo");
+                        startActivity(i5);
+                        break;
+                    case 6:
+                        Intent i6=new Intent(getApplicationContext(),Event_Registration.class);
+                        i6.putExtra("name","NitroRacing");
+                        startActivity(i6);
+                        break;
+                    case 7:
+                        Intent i7=new Intent(getApplicationContext(),Event_Registration.class);
+                        i7.putExtra("name","OneMinToWin");
+                        startActivity(i7);
+                        break;
+                    case 8:
+                        Intent i8=new Intent(getApplicationContext(),Event_Registration.class);
+                        i8.putExtra("name","CADModelling");
+                        startActivity(i8);
+                        break;
+
 
                 }
 

@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
+
 import com.example.root.promethean2k17.Models.Eee_Model;
 import com.example.root.promethean2k17.R;
 
@@ -32,14 +32,7 @@ public class Eee_Adapter extends RecyclerView.Adapter<Eee_Adapter.EeeViewHolder>
     @Override
     public void onBindViewHolder(EeeViewHolder holder, int position) {
         Eee_Model model=arraylist.get(position);
-        RequestOptions req = new RequestOptions();
-        req.diskCacheStrategy(DiskCacheStrategy.RESOURCE);
-        req.error(R.drawable.ic_error);
-        Glide.with(context)
-                .load(model.getEee_pic())
-                .apply(req)
-                .into(holder.Eee_pic);
-
+        Glide.with(context).load(model.getEee_pic()).diskCacheStrategy(DiskCacheStrategy.SOURCE).error(R.drawable.ic_error).into(holder.Eee_pic);
         holder.progressBar.setVisibility(View.GONE);
     }
 

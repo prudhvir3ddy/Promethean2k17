@@ -30,10 +30,16 @@ public class Eee extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.eee_recyclerview);
 
         ArrayList<Eee_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Eee_Model(R.drawable.cse));
         arrayList.add(new Eee_Model(R.drawable.eee));
-        arrayList.add(new Eee_Model(R.drawable.ece));
-        arrayList.add(new Eee_Model(R.drawable.mech));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
+        arrayList.add(new Eee_Model(R.drawable.eee));
         adapter=new Eee_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -45,16 +51,54 @@ public class Eee extends AppCompatActivity {
                 switch (position){
 
                     case 0:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i1=new Intent(getApplicationContext(),Event_Registration.class);
+                        i1.putExtra("name","SolarWorkshop");
+                        startActivity(i1);
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i2=new Intent(getApplicationContext(),Event_Registration.class);
+                        i2.putExtra("name","MatLabWorkshop");
+                        startActivity(i2);
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i3=new Intent(getApplicationContext(),Event_Registration.class);
+                        i3.putExtra("name","EMCDWorkshop");
+                        startActivity(i3);
                         break;
                     case 3:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i4=new Intent(getApplicationContext(),Event_Registration.class);
+                        i4.putExtra("name","PaperPresentationEee");
+                        startActivity(i4);
+                        break;
+                    case 4:
+                        Intent i5=new Intent(getApplicationContext(),Event_Registration.class);
+                        i5.putExtra("name","PosterPresentationEee");
+                        startActivity(i5);
+                        break;
+                    case 5:
+                        Intent i6=new Intent(getApplicationContext(),Event_Registration.class);
+                        i6.putExtra("name","TechnicalQuizEee");
+                        startActivity(i6);
+                        break;
+                    case 6:
+                        Intent i7=new Intent(getApplicationContext(),Event_Registration.class);
+                        i7.putExtra("name","TechiTextoPress");
+                        startActivity(i7);
+                        break;
+                    case 7:
+                        Intent i8=new Intent(getApplicationContext(),Event_Registration.class);
+                        i8.putExtra("name","CircuitLadder");
+                        startActivity(i8);
+                        break;
+                    case 8:
+                        Intent i9=new Intent(getApplicationContext(),Event_Registration.class);
+                        i9.putExtra("name","PeechaKucha");
+                        startActivity(i9);
+                        break;
+                    case 9:
+                        Intent i10=new Intent(getApplicationContext(),Event_Registration.class);
+                        i10.putExtra("name","Circution");
+                        startActivity(i10);
                         break;
 
                 }

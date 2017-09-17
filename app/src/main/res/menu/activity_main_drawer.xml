@@ -24,7 +24,7 @@
             android:title="Contributers" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/aboutus"
+            android:icon="@drawable/about"
             android:title="About Promethean" />
         <item
             android:id="@+id/nav_report_bug"
@@ -38,6 +38,10 @@
             android:id="@+id/nav_sponsors"
             android:icon="@drawable/sponsors"
             android:title="Sponsors" />
+        <item
+            android:id="@+id/nav_team"
+            android:icon="@drawable/aboutus"
+            android:title="Team Promethean"/>
     </group>
 
     <item android:title="Developed by">

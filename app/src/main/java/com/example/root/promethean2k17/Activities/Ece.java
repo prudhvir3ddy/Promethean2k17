@@ -32,10 +32,10 @@ public class Ece extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.ece_recyclerview);
 
         ArrayList<Ece_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Ece_Model(R.drawable.cse));
-        arrayList.add(new Ece_Model(R.drawable.eee));
         arrayList.add(new Ece_Model(R.drawable.ece));
-        arrayList.add(new Ece_Model(R.drawable.mech));
+        arrayList.add(new Ece_Model(R.drawable.ece));
+        arrayList.add(new Ece_Model(R.drawable.ece));
+        arrayList.add(new Ece_Model(R.drawable.ece));
         adapter=new Ece_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

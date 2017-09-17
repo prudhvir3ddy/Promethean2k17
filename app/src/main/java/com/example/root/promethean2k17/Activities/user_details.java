@@ -172,9 +172,11 @@ if(sharedprefs.getLogedInUserName()!=null)
                                 . writeTimeout(120, TimeUnit.SECONDS)
                                 .build();
                         Log.d("entered ","1");
+                        final String username=FirstName+LastName;
                         AndroidNetworking.post(urls.registration_url)
                                 .addBodyParameter("firstname",FirstName)
                                 .addBodyParameter("lastname",LastName)
+                                .addBodyParameter("username",username)
                                 .addBodyParameter("email",Email)
                                 .addBodyParameter("collegename",CollegeName)
                                 .addBodyParameter("phonenumber",formattedPhoneNumber)
@@ -184,6 +186,7 @@ if(sharedprefs.getLogedInUserName()!=null)
                                 .getAsJSONArray(new JSONArrayRequestListener() {
                                     @Override
                                     public void onResponse(JSONArray response) {
+                                        Log.d("response",""+response);
                                         loadToast.success();
                                         //  Toast.makeText(getApplicationContext(),response.toString(), Toast.LENGTH_SHORT).show();
                                         int j = response.length();
@@ -203,7 +206,7 @@ if(sharedprefs.getLogedInUserName()!=null)
 
 
                                                                             Toast.makeText(getApplicationContext(),"Successfully Registered",Toast.LENGTH_SHORT).show();
-                                                                            startActivity(new Intent(getApplicationContext(),Home.class));
+                                                                            startActivity(new Intent(getApplicationContext(),Check.class));
                                                                             finish();
 
                                                                         }else{

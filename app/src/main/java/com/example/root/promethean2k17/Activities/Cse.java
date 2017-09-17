@@ -33,9 +33,19 @@ Cse_Adapter adapter;
 
         ArrayList<Cse_Model> arrayList = new ArrayList<>();
         arrayList.add(new Cse_Model(R.drawable.cse));
-        arrayList.add(new Cse_Model(R.drawable.eee));
-        arrayList.add(new Cse_Model(R.drawable.ece));
-        arrayList.add(new Cse_Model(R.drawable.mech));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+        arrayList.add(new Cse_Model(R.drawable.cse));
+
         adapter=new Cse_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -47,16 +57,72 @@ Cse_Adapter adapter;
                 switch (position){
 
                     case 0:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i1 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i1.putExtra("name","WeboMaster");
+                        startActivity(i1);
+
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i12 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i12.putExtra("name","PythonWithHandsOn");
+                        startActivity(i12);
+
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i13 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i13.putExtra("name","IBMBlueMix");
+                        startActivity(i13);
+
                         break;
                     case 3:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+                        Intent i2 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i2.putExtra("name","PaperPresentationCse");
+                        startActivity(i2);
+                        break;
+                    case 4:
+                        Intent i3 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i3.putExtra("name","PosterPresentationCse");
+                        startActivity(i3);
+                        break;
+                    case 5:
+                        Intent i4 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i4.putExtra("name","TechMaze");
+                        startActivity(i4);
+                        break;
+                    case 6:
+                        Intent i5 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i5.putExtra("name","CodeChef");
+                        startActivity(i5);
+                        break;
+                    case 7:
+                        Intent i6 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i6.putExtra("name","TheErudite");
+                        startActivity(i6);
+                        break;
+                    case 8:
+                        Intent i7 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i7.putExtra("name","TechnoLadder");
+                        startActivity(i7);
+                        break;
+                    case 9:
+                        Intent i8= new Intent(getApplicationContext(),Event_Registration.class);
+                        i8.putExtra("name","CodeVyuha");
+                        startActivity(i8);
+                        break;
+                    case 10:
+                        Intent i9 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i9.putExtra("name","DecodeRace");
+                        startActivity(i9);
+                        break;
+                    case 11:
+                        Intent i10 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i10.putExtra("name","ReadyPlayerOne");
+                        startActivity(i10);
+                        break;
+                    case 12:
+                        Intent i11 = new Intent(getApplicationContext(),Event_Registration.class);
+                        i11.putExtra("name","CodeRunner");
+                        startActivity(i11);
                         break;
 
                 }

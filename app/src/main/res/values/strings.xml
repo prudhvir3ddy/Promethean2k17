@@ -10,5 +10,29 @@
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">d3cac39d6f1c235c508cd94f34e6c541</string>
     <string name="ak_login_protocol_scheme">ak119981681996122</string>
     <string name="continue_with_phone">continue with phone</string>
+    <string name="About"><b><u><h1>\nABOUT PROMETHEAN:</h1></u></b>\nPromethean is BVRIT Annual National Level Technical Symposium With The Motive of "Spreading Flames of Knowledge". Promethean Provides A Platform To All Those Innovative And Ingenious Techies To Showcase Their Talents And Broaden Their Horizons. Each Year, Thousands of Students From Along The Country Come To Sojourn This Technical Extravaganza. Promethean 2k17 Returns With A Bang This Year All Set To Re-Write History. With A Mix of Spice For The Grey Cells And For The Heart, Promethean Sets Out To Be A Trail-Blazer In Hosting A Roller-Coaster Ride For Those With An Appetite For Science. For We Believe, "Knowledge is Worth Spreading".
+        \n\n<b>President:</b>\nDr.Y.Krishna Reddy - Principal\n\n<b>Chief Advisor:</b>\nK.Srinivas Reddy - Dean\n\n<b>Convenor:</b>\nDr.N.Bhoopal - HOD,EEE.\n\n<b>Co-Conveners:</b>\nProf Ashok Shigli - HOD,BME.\nDr.C.Krishna Raju - HOD,CIVIL.\n\n<b>Faculty Coordinators:</b>\nA.Vijay Kumar - Asst Prof, EEE.\nPrem Kumar Muthyala - Asst Prof, BME.\nUmesh.R.Biradar-Asst Prof,CIVIL</string>
+    <string name="eventhold">"The Event is already registerd and its STATUS IS ON HOLD, Please attend the event to register a new thread of this event again."</string>
+    <string name="APPKEY">SW5mb3F1ZXN0MjAxN0FwcEtleQ==</string>
+    <string name="contributers">We thank the open source community for all their contributions.\n\n
+    <b>Developer:</b>\n\n
+\t<a href="https://github.com/psychot3ch">Prudhvi Reddy</a>\n\n
+        <b>Contributers:</b>\n\n
+        \t<a href="https://github.com/bh4nut3j4">Bhanu Teja</a>\n\n
+        \t<a href="https://www.facebook.com/reddyshyam1997">Shyam Kumar Reddy</a>\n\n
+        \t<a href="https://www.facebook.com/mittu.rahul.97">Rahul Bhargava</a>\n\n
+        \t<a href="https://github.com/sri-ker/">Sai Chaitanya Kulkarni</a>\n\n
+        \t<a href="https://www.facebook.com/profile.php?id=100001236403045/">Sai Vamsi</a>\n\n
+
+    </string>
+    <string name="licenses_text">\tThe MIT License (MIT)\n
+        \tCopyright (&#169;) 2016  copyright PrudhviReddy\n\n
+       \t<a href="">MIT License</a>\n\n
+        \t\nThe following are third party software/api that are used in Promethean2k17 app.\n\n
+        \t<a href="https://github.com/amitshekhariitbhu/Fast-Android-Networking">Fast-Android-Networking</a>\n\n
+\t<a href="https://github.com/bumptech/glide">Glide</a>\n\n
+        \t<a href="https://github.com/OneSignal">One Signal</a>\n\n
+\t<a href="https://github.com/code-mc/loadtoast">Load Toast</a>\n\n
+    </string>
 
 </resources>

@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
+
 import com.example.root.promethean2k17.Models.Mech_Model;
 import com.example.root.promethean2k17.R;
 
@@ -36,15 +36,9 @@ public class Mech_Adapter extends RecyclerView.Adapter<Mech_Adapter.MechViewHold
     @Override
     public void onBindViewHolder(Mech_Adapter.MechViewHolder holder, int position) {
         Mech_Model model=arraylist.get(position);
-        RequestOptions req = new RequestOptions();
-        req.diskCacheStrategy(DiskCacheStrategy.RESOURCE);
-        req.error(R.drawable.ic_error);
-        Glide.with(context)
-                .load(model.getMech_pic())
-                .apply(req)
-                .into(holder.Mech_pic);
-
+        Glide.with(context).load(model.getMech_pic()).diskCacheStrategy(DiskCacheStrategy.SOURCE).error(R.drawable.ic_error).into(holder.Mech_pic);
         holder.progressBar.setVisibility(View.GONE);
+
     }
 
 
