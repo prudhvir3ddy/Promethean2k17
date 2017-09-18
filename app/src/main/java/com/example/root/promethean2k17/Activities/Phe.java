@@ -28,15 +28,15 @@ Phe_Adapter adapter;
         setContentView(R.layout.activity_phe);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Phe Events");
-        recyclerView=(RecyclerView)findViewById(R.id.phe_recyclerview);
+        recyclerView= findViewById(R.id.phe_recyclerview);
 
         ArrayList<Phe_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Phe_Model(R.drawable.cse));
-        arrayList.add(new Phe_Model(R.drawable.cse));
-        arrayList.add(new Phe_Model(R.drawable.cse));
-        arrayList.add(new Phe_Model(R.drawable.cse));
-        arrayList.add(new Phe_Model(R.drawable.cse));
-        arrayList.add(new Phe_Model(R.drawable.cse));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
+        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe"));
         adapter=new Phe_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -74,7 +74,7 @@ Phe_Adapter adapter;
                         break;
                     case 5:
                         Intent i6=new Intent(getApplicationContext(),Event_Registration.class);
-                        i6.putExtra("name","MakeaBotWorkshop");
+                        i6.putExtra("name","PharmaChallengesAndOppurtunities");
                         startActivity(i6);
                         break;
 

@@ -46,7 +46,7 @@ RecyclerView recyclerView;
         setContentView(R.layout.activity_team_promethean);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Team Promethean");
-        recyclerView= (RecyclerView) findViewById(R.id.team_promethean_recyclerview);
+        recyclerView= findViewById(R.id.team_promethean_recyclerview);
         list = new ArrayList<>();
         loadToast=new LoadToast(this);
         loadToast.setText("Loading...");

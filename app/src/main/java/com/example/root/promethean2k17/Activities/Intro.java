@@ -66,16 +66,16 @@ Sharedprefs sharedprefs;
                 .backgroundDark(R.color.color_dark_material_motion)
                 .build());
         addSlide(new SimpleSlide.Builder()
-                .title("Get QR code")
-                .description("Get an Unique Qr code for every event you register")
+                .title("Get Unique code")
+                .description("Get an Unique code for every event you register")
                 .image(R.drawable.getqr)
                 .background(R.color.color_custom_fragment_1)
                 .backgroundDark(R.color.color_dark_custom_fragment_1)
                 .build());
 
         addSlide(new SimpleSlide.Builder()
-                .title("Scan and Attend")
-                .description("Show the Qr code at the venue and attend the event")
+                .title("Attend and Verify")
+                .description("Show the Unique code at the venue and attend the event")
                 .image(R.drawable.scan)
                 .background(R.color.color_permissions)
                 .backgroundDark(R.color.color_dark_permissions)

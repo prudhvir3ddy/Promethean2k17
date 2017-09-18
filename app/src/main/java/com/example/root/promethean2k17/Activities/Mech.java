@@ -27,17 +27,18 @@ public class Mech extends AppCompatActivity {
         setContentView(R.layout.activity_mech);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Mech Events");
-        recyclerView=(RecyclerView)findViewById(R.id.mech_recyclerview);
+        recyclerView= findViewById(R.id.mech_recyclerview);
 
         ArrayList<Mech_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
-        arrayList.add(new Mech_Model(R.drawable.mech));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/mechanograsp.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/automobile.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/paper.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/poster.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/quiz.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/project.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/nitro.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/minute.jpg"));
+        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/cad.jpg"));
         adapter=new Mech_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -85,7 +86,7 @@ public class Mech extends AppCompatActivity {
                         break;
                     case 7:
                         Intent i7=new Intent(getApplicationContext(),Event_Registration.class);
-                        i7.putExtra("name","OneMinToWin");
+                        i7.putExtra("name","OneMinuteToWin");
                         startActivity(i7);
                         break;
                     case 8:

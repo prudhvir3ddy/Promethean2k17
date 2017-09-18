@@ -48,8 +48,8 @@ public class Notifications extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
-        recyclerView= (RecyclerView) findViewById(R.id.notifications_f_recyclerview);
-        nonotifi= (TextView) findViewById(R.id.nonotifications);
+        recyclerView= findViewById(R.id.notifications_f_recyclerview);
+        nonotifi= findViewById(R.id.nonotifications);
         list = new ArrayList<>();
         loadToast=new LoadToast(this);
         loadToast.setText("Loading...");
@@ -67,7 +67,7 @@ public class Notifications extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new Onitemtouchlistener(context, new Onitemtouchlistener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                TextView headtxt= (TextView) view.findViewById(R.id.home_card_heading);
+                TextView headtxt= view.findViewById(R.id.home_card_heading);
                 String  heading = headtxt.getText().toString();
                 Intent expand = new Intent(getApplicationContext(),Notification_Expand.class);
                 expand.putExtra("heading",heading);

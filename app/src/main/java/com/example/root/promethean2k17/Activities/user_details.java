@@ -65,11 +65,11 @@ if(sharedprefs.getLogedInUserName()!=null)
         connection=new Connection(this);
         loadToast=new LoadToast(this);
         loadToast.setText("Loading...");
-        email=(EditText)findViewById(R.id.Email);
-        f_name=(EditText)findViewById(R.id.fname);
-        l_name=(EditText)findViewById(R.id.LastName);
-        c_name=(EditText)findViewById(R.id.CollegeName);
-        register=(Button)findViewById(R.id.registerbtn);
+        email= findViewById(R.id.Email);
+        f_name= findViewById(R.id.fname);
+        l_name= findViewById(R.id.LastName);
+        c_name= findViewById(R.id.CollegeName);
+        register= findViewById(R.id.registerbtn);
         formattedPhoneNumber=sharedprefs.getPhone();
 
 //        AccountKit.getCurrentAccount(new AccountKitCallback<Account>() {

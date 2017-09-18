@@ -5,17 +5,17 @@ package com.example.root.promethean2k17.Models;
  */
 
 public class Mba_Model {
-    public int Mba_pic;
+    public String Mba_pic;
 
-    public Mba_Model(int Mba_pic){
+    public Mba_Model(String Mba_pic){
         this.Mba_pic=Mba_pic;
     }
 
-    public int getMba_pic() {
+    public String getMba_pic() {
         return Mba_pic;
     }
 
-    public void setMba_pic(int Mba_pic) {
+    public void setMba_pic(String Mba_pic) {
         this.Mba_pic = Mba_pic;
     }
 }

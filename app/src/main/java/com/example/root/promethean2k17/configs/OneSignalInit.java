@@ -21,4 +21,5 @@ public class OneSignalInit extends Application{
         // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
         // OneSignal.syncHashedEmail(userEmail);
     }
+
 }

@@ -50,8 +50,8 @@ public class Home_Adapter extends RecyclerView.Adapter<Home_Adapter.HomeViewHold
 
         public HomeViewHolder(View itemView) {
             super(itemView);
-            cat_img = (ImageView) itemView.findViewById(R.id.home_imgview);
-            progressBar= (ProgressBar) itemView.findViewById(R.id.progress);
+            cat_img = itemView.findViewById(R.id.home_imgview);
+            progressBar= itemView.findViewById(R.id.progress);
         }
 
     }

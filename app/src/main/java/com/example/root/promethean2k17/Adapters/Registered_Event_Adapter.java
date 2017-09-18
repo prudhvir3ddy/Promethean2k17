@@ -1,17 +1,15 @@
 package com.example.root.promethean2k17.Adapters;
 
-import android.app.AlertDialog;
+
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.root.promethean2k17.Activities.Delete_Event;
+
 import com.example.root.promethean2k17.Models.Registered_Events_Model;
 import com.example.root.promethean2k17.R;
 
@@ -55,53 +53,53 @@ public class Registered_Event_Adapter extends RecyclerView.Adapter<Registered_Ev
         TextView event_reg_id;
         public RegEvent_ViewHolder(View itemView) {
             super(itemView);
-            eventname= (TextView) itemView.findViewById(R.id.eventname);
-            event_reg_id= (TextView) itemView.findViewById(R.id.event_reg_id);
+            eventname= itemView.findViewById(R.id.eventname);
+            event_reg_id= itemView.findViewById(R.id.event_reg_id);
 
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    TextView e_name = (TextView) view.findViewById(R.id.eventname);
-                    final TextView e_id = (TextView) view.findViewById(R.id.event_reg_id);
-                    final String eventname=e_name.getText().toString();
-                    final String eventid=e_id.getText().toString();
-                    Log.d("LOG","LONGGGG"+eventname);
-
-
-
-                    final AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-
-
-                    alertDialog.setTitle("Confirm Delete...");
-
-
-                    alertDialog.setMessage("Are you sure you want delete this? \n" +
-                            "NOTE: If you have already made the payment for this event and you still delete it without attending,You cannot attend the event and Money wont be Refunded.");
-
-
-                    alertDialog.setIcon(R.drawable.promethean);
-
-
-                    alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int which) {
-                            Intent i = new Intent(context, Delete_Event.class);
-                            i.putExtra("eventname",eventname);
-                            i.putExtra("eventid",eventid);
-                            context.startActivity(i);
-
-                        }
-                    });
-                    alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-                    alertDialog.show();
-
-                    return false;
-                }
-            });
-
+//            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View view) {
+//                    TextView e_name = (TextView) view.findViewById(R.id.eventname);
+//                    final TextView e_id = (TextView) view.findViewById(R.id.event_reg_id);
+//                    final String eventname=e_name.getText().toString();
+//                    final String eventid=e_id.getText().toString();
+//                    Log.d("LOG","LONGGGG"+eventname);
+//
+//
+//
+//                    final AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+//
+//
+//                    alertDialog.setTitle("Confirm Delete...");
+//
+//
+//                    alertDialog.setMessage("Are you sure you want delete this? \n" +
+//                            "NOTE: If you have already made the payment for this event and you still delete it without attending,You cannot attend the event and Money wont be Refunded.");
+//
+//
+//                    alertDialog.setIcon(R.drawable.promethean);
+//
+//
+//                    alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog,int which) {
+//                            Intent i = new Intent(context, Delete_Event.class);
+//                            i.putExtra("eventname",eventname);
+//                            i.putExtra("eventid",eventid);
+//                            context.startActivity(i);
+//
+//                        }
+//                    });
+//                    alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.cancel();
+//                        }
+//                    });
+//                    alertDialog.show();
+//
+//                    return false;
+//                }
+//            });
+//
 
         }
     }

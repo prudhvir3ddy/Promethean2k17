@@ -6,17 +6,17 @@ package com.example.root.promethean2k17.Models;
 
 public class Cse_Model {
 
-    public int Cse_pic;
+    public String Cse_pic;
 
-    public Cse_Model(int Cse_pic){
+    public Cse_Model(String Cse_pic){
         this.Cse_pic=Cse_pic;
     }
 
-    public int getCse_pic() {
+    public String getCse_pic() {
         return Cse_pic;
     }
 
-    public void setCse_pic(int Cse_pic) {
+    public void setCse_pic(String Cse_pic) {
         this.Cse_pic = Cse_pic;
     }
 }

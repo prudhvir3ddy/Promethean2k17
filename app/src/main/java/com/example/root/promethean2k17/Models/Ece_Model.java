@@ -5,17 +5,17 @@ package com.example.root.promethean2k17.Models;
  */
 
 public class Ece_Model {
-    public int Ece_pic;
+    public String Ece_pic;
 
-    public Ece_Model(int Ece_pic) {
+    public Ece_Model(String Ece_pic) {
         this.Ece_pic = Ece_pic;
     }
 
-    public int getEce_pic() {
+    public String getEce_pic() {
         return Ece_pic;
     }
 
-    public void setEce_pic(int Ece_pic) {
+    public void setEce_pic(String Ece_pic) {
         this.Ece_pic = Ece_pic;
     }
 }

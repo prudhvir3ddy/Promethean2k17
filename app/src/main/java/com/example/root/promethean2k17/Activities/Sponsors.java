@@ -47,7 +47,7 @@ public class Sponsors extends AppCompatActivity {
         setContentView(R.layout.activity_sponsors);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Sponsors");
-        recyclerView= (RecyclerView) findViewById(R.id.sponsers_recyclerview);
+        recyclerView= findViewById(R.id.sponsers_recyclerview);
         list = new ArrayList<>();
         loadToast=new LoadToast(this);
         loadToast.setText("Loading...");

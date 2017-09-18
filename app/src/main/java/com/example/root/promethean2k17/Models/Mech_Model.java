@@ -5,16 +5,16 @@ package com.example.root.promethean2k17.Models;
  */
 
 public class Mech_Model {
-    public int Mech_pic;
+    public String Mech_pic;
 
-    public Mech_Model(int Mech_pic){
+    public Mech_Model(String Mech_pic){
         this.Mech_pic=Mech_pic;
     }
 
-    public int getMech_pic() {
+    public String getMech_pic() {
         return Mech_pic;
     }
 
-    public void setMech_pic(int Mech_pic) {
+    public void setMech_pic(String Mech_pic) {
         this.Mech_pic = Mech_pic;
 }}

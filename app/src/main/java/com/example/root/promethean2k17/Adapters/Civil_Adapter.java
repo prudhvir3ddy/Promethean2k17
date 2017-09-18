@@ -10,6 +10,9 @@ import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.example.root.promethean2k17.Models.Civil_Model;
 import com.example.root.promethean2k17.R;
 
@@ -33,10 +36,21 @@ public class Civil_Adapter extends RecyclerView.Adapter<Civil_Adapter.CivilViewH
     }
 
     @Override
-    public void onBindViewHolder(Civil_Adapter.CivilViewHolder holder, int position) {
+    public void onBindViewHolder(final Civil_Adapter.CivilViewHolder holder, int position) {
         Civil_Model model=arraylist.get(position);
-        Glide.with(context).load(model.getCivil_pic()).diskCacheStrategy(DiskCacheStrategy.SOURCE).error(R.drawable.ic_error).into(holder.Civil_pic);
-        holder.progressBar.setVisibility(View.GONE);
+        Glide.with(context).load(model.getCivil_pic()).diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+
+                holder.progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        }).into(holder.Civil_pic);
     }
 
 
@@ -49,8 +63,8 @@ public class Civil_Adapter extends RecyclerView.Adapter<Civil_Adapter.CivilViewH
         ProgressBar progressBar;
         public CivilViewHolder(View itemView) {
             super(itemView);
-            Civil_pic = (ImageView) itemView.findViewById(R.id.home_imgview);
-            progressBar= (ProgressBar) itemView.findViewById(R.id.progress);
+            Civil_pic = itemView.findViewById(R.id.home_imgview);
+            progressBar= itemView.findViewById(R.id.progress);
         }
     }
 }

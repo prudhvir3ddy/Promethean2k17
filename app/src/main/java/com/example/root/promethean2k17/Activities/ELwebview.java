@@ -25,7 +25,7 @@ public class ELwebview extends AppCompatActivity {
 
 
             url = "http://errorlabs.in";
-        webView = (WebView) findViewById(R.id.webview);
+        webView = findViewById(R.id.webview);
         lt=new LoadToast(this);
         Connection connection = new Connection(getApplicationContext());
         boolean checkinternet = connection.isInternet();

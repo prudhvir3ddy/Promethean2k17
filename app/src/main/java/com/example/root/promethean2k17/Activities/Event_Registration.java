@@ -71,22 +71,22 @@ public class Event_Registration extends AppCompatActivity {
         loadToast = new LoadToast(this);
         loadToast.setText("Loading...");
         sharedPrefs = new Sharedprefs(this);
-        eventimg = (ImageView) findViewById(R.id.eventimg);
-        eventdescription = (TextView) findViewById(R.id.eventdescription);
-        eventrules = (TextView) findViewById(R.id.eventrules);
-        no_of_participants = (TextView) findViewById(R.id.noparticipants);
-        price_per_head = (TextView) findViewById(R.id.price_per_head);
-        cod1 = (TextView) findViewById(R.id.CO_NAME_1);
-        cod1_no = (TextView) findViewById(R.id.CO_NO_1);
-        cod2 = (TextView) findViewById(R.id.CO_NAME_2);
-        cod2_no = (TextView) findViewById(R.id.CO_NO_2);
-        progressBar = (ProgressBar) findViewById(R.id.progress);
-        rel_lay = (RelativeLayout) findViewById(R.id.rel_lay);
+        eventimg = findViewById(R.id.eventimg);
+        eventdescription = findViewById(R.id.eventdescription);
+        eventrules = findViewById(R.id.eventrules);
+        no_of_participants = findViewById(R.id.noparticipants);
+        price_per_head = findViewById(R.id.price_per_head);
+        cod1 = findViewById(R.id.CO_NAME_1);
+        cod1_no = findViewById(R.id.CO_NO_1);
+        cod2 = findViewById(R.id.CO_NAME_2);
+        cod2_no = findViewById(R.id.CO_NO_2);
+        progressBar = findViewById(R.id.progress);
+        rel_lay = findViewById(R.id.rel_lay);
         String appkey = getString(R.string.APPKEY);
         geteventdetails(appkey, eventname);
-        checkBox = (CheckBox) findViewById(R.id.terms_checkbox);
-        button = (Button) findViewById(R.id.eventslotbtn);
-        referrer= (EditText) findViewById(R.id.referrer);
+        checkBox = findViewById(R.id.terms_checkbox);
+        button = findViewById(R.id.eventslotbtn);
+        referrer= findViewById(R.id.referrer);
         dialogBuilder=new NiftyDialogBuilder(this,R.style.AppTheme);
         eventhold=new NiftyDialogBuilder(this,R.style.AppTheme);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -118,20 +118,18 @@ public class Event_Registration extends AppCompatActivity {
                     finish();
                 }else {
                     String name = eventname;
-                    String amount = price_per_head.getText().toString();
+//                    String amount = price_per_head.getText().toString();
                     String no_of_prtcpnts =no_of_participants.getText().toString();
-                    int amount_to_pay=Integer.parseInt(no_of_prtcpnts)*Integer.parseInt(amount);
-                    int amountoff=amount_to_pay/10;
-                    int finalamount = amount_to_pay-amountoff;
+//                   final int amount_to_pay=Integer.parseInt(no_of_prtcpnts)*Integer.parseInt(amount);
+//                    int amountoff=amount_to_pay/10;
+//                    int finalamount = amount_to_pay-amountoff;
                     if(Integer.parseInt(no_of_prtcpnts)==1){
                         String msg ="Proceed to register for "+name+"? \n\n" +
-                                "Amount to be paid at the venue on the day of IQ'17 is Rs: "+amount_to_pay+".\n\n" +
-                                "Pay through PAYTM(at the venue) and get 10% OFF on the total amount.\n";
+                                "Amount to be paid at the venue on the day of promethean'17.\n\n";
                         proceedtoregister(name,msg );
                     }else {
                         String msg="Proceed to register for "+name+"? \n\n" +
-                                "Amount to be paid at the venue on the day of IQ'17 is Rs: "+amount_to_pay+" (FOR TOTAL TEAM) .\n\n" +
-                                "Pay through PAYTM(at the venue) and get 10% OFF on the total amount.\n";
+                                "Amount to be paid at the venue on the day of promethean'17  (FOR TOTAL TEAM) .\n\n";
                         proceedtoregister(name,msg);
                     }
 

@@ -51,13 +51,13 @@ public class Notification_Expand extends AppCompatActivity {
         loadToast= new LoadToast(this);
         loadToast.setText("loading...");
         loadToast.show();
-        tag_text = (TextView) findViewById(R.id.tag_text);
-        heading_text = (TextView) findViewById(R.id.heading_text);
-        content_text = (TextView) findViewById(R.id.content_text);
-        image_text = (ImageView) findViewById(R.id.image_text);
-        progress= (ProgressBar) findViewById(R.id.progress);
+        tag_text = findViewById(R.id.tag_text);
+        heading_text = findViewById(R.id.heading_text);
+        content_text = findViewById(R.id.content_text);
+        image_text = findViewById(R.id.image_text);
+        progress= findViewById(R.id.progress);
         connection=new Connection(this);
-        scrollView= (ScrollView) findViewById(R.id.notif_exp_scrollview);
+        scrollView= findViewById(R.id.notif_exp_scrollview);
         scrollView.setVisibility(View.INVISIBLE);
         Boolean checkinternet =(connection.isInternet());
         if (checkinternet) {

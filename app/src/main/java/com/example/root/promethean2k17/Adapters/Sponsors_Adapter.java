@@ -74,9 +74,9 @@ public class Sponsors_Adapter extends RecyclerView.Adapter<Sponsors_Adapter.Spon
         public SponserViewHolder(View itemView) {
             super(itemView);
             //  image= (CircularImageView) itemView.findViewById(R.id.sponser_img);
-            image= (ImageView) itemView.findViewById(R.id.sponser_img);
-            desc= (TextView) itemView.findViewById(R.id.sponser_desc);
-            progressBar= (ProgressBar) itemView.findViewById(R.id.progress);
+            image= itemView.findViewById(R.id.sponser_img);
+            desc= itemView.findViewById(R.id.sponser_desc);
+            progressBar= itemView.findViewById(R.id.progress);
 
 
         }

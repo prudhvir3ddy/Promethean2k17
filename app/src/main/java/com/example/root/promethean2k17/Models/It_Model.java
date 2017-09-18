@@ -5,17 +5,17 @@ package com.example.root.promethean2k17.Models;
  */
 
 public class It_Model {
-    public int It_pic;
+    public String It_pic;
 
-    public It_Model(int It_pic){
+    public It_Model(String It_pic){
         this.It_pic=It_pic;
     }
 
-    public int getIt_pic() {
+    public String getIt_pic() {
         return It_pic;
     }
 
-    public void setIt_pic(int It_pic) {
+    public void setIt_pic(String It_pic) {
         this.It_pic = It_pic;
     }
 }

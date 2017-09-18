@@ -49,10 +49,10 @@ Sharedprefs sharedprefs;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sharedprefs=new Sharedprefs(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         dialogBuilder= NiftyDialogBuilder.getInstance(this);
-        recyclerView=(RecyclerView)findViewById(R.id.home_recyclerview);
+        recyclerView= findViewById(R.id.home_recyclerview);
         ArrayList<Home_Model> arrayList = new ArrayList<>();
         arrayList.add(new Home_Model(R.drawable.cse));
         arrayList.add(new Home_Model(R.drawable.ece));
@@ -61,9 +61,9 @@ Sharedprefs sharedprefs;
         arrayList.add(new Home_Model(R.drawable.it));
         arrayList.add(new Home_Model(R.drawable.chem));
         arrayList.add(new Home_Model(R.drawable.civil));
-        arrayList.add(new Home_Model(R.drawable.cse));
-        arrayList.add(new Home_Model(R.drawable.cse));
-        arrayList.add(new Home_Model(R.drawable.cse));
+        arrayList.add(new Home_Model(R.drawable.bme));
+        arrayList.add(new Home_Model(R.drawable.phe));
+        arrayList.add(new Home_Model(R.drawable.mba));
         /*arrayList.add(new Home_Model("https://jbiet-my.sharepoint.com/personal/acm_jbiet_edu_in/_layouts/15/guestaccess.aspx?guestaccesstoken=vki67mtPb6h4EbrJ%2b9BtM5mWe5mkUvBTBnxxo9lW2ak%3d&docid=05bd04c61f773482b9007d29bb5e0647e&rev=1"));
         arrayList.add(new Home_Model("https://jbiet-my.sharepoint.com/personal/acm_jbiet_edu_in/_layouts/15/guestaccess.aspx?guestaccesstoken=g%2frfDnhVTceJXTwDYqeNPXcEMzL5Abf1s%2fdGGqIYIz8%3d&docid=0cd682a6b1b1a479aba374b9af7c1b754&rev=1"));
         arrayList.add(new Home_Model("https://jbiet-my.sharepoint.com/personal/acm_jbiet_edu_in/_layouts/15/guestaccess.aspx?guestaccesstoken=UeXt3YJ1yCvC6pGow0%2fgoLu63gx2LdY3Sy7mqKDNqBA%3d&docid=02015d39fd0634ee4abebf8710c5b621d&rev=1"));
@@ -115,7 +115,7 @@ Sharedprefs sharedprefs;
         }));
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,19 +123,19 @@ Sharedprefs sharedprefs;
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -269,7 +269,7 @@ startActivity(new Intent(getApplication(),ELwebview.class));
         }
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

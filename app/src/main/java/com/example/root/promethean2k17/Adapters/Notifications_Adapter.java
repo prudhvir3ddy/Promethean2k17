@@ -81,11 +81,11 @@ public class Notifications_Adapter extends RecyclerView.Adapter<Notifications_Ad
         ProgressBar progressBar;
         public NotificationsViewHolder(View itemView) {
             super(itemView);
-            heading= (TextView) itemView.findViewById(R.id.home_card_heading);
-            timestamp= (TextView) itemView.findViewById(R.id.home_card_timestamp);
-            tag= (TextView) itemView.findViewById(R.id.home_card_tag);
-            img= (CircularImageView) itemView.findViewById(R.id.home_card_img);
-            progressBar = (ProgressBar) itemView.findViewById(R.id.progress);
+            heading= itemView.findViewById(R.id.home_card_heading);
+            timestamp= itemView.findViewById(R.id.home_card_timestamp);
+            tag= itemView.findViewById(R.id.home_card_tag);
+            img= itemView.findViewById(R.id.home_card_img);
+            progressBar = itemView.findViewById(R.id.progress);
 
 
 

@@ -28,19 +28,19 @@ Civil_Adapter adapter;
         setContentView(R.layout.activity_civil);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Civil Events");
-        recyclerView=(RecyclerView)findViewById(R.id.civil_recyclerview);
+        recyclerView= findViewById(R.id.civil_recyclerview);
 
         ArrayList<Civil_Model> arrayList = new ArrayList<>();
 
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
-        arrayList.add(new Civil_Model(R.drawable.civil));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
+        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/"));
 
         adapter=new Civil_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -59,7 +59,7 @@ Civil_Adapter adapter;
                         break;
                     case 1:
                         Intent i2 = new Intent(getApplicationContext(),Event_Registration.class);
-                        i2.putExtra("name","StaadProWorkshop");
+                        i2.putExtra("name","sculpt");
                         startActivity(i2);
                         break;
                     case 2:
@@ -69,7 +69,7 @@ Civil_Adapter adapter;
                         break;
                     case 3:
                         Intent i4 = new Intent(getApplicationContext(),Event_Registration.class);
-                        i4.putExtra("name","PosterPresentationCivil");
+                        i4.putExtra("name","ModelPresentation");
                         startActivity(i4);
                         break;
                     case 4:

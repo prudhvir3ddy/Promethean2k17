@@ -49,8 +49,8 @@ public class RegisteredEvents extends AppCompatActivity {
         setContentView(R.layout.activity_registered_events);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Registered Events");
-        recyclerView= (RecyclerView) findViewById(R.id.registered_f_recyclerview);
-        noreg= (TextView) findViewById(R.id.noregistrationtext);
+        recyclerView= findViewById(R.id.registered_f_recyclerview);
+        noreg= findViewById(R.id.noregistrationtext);
         list = new ArrayList<>();
         loadToast=new LoadToast(this);
         loadToast.setText("Loading...");
@@ -82,8 +82,8 @@ public class RegisteredEvents extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new Onitemtouchlistener(context, new Onitemtouchlistener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int pos) {
-                TextView e_name = (TextView) view.findViewById(R.id.eventname);
-                TextView e_id = (TextView) view.findViewById(R.id.event_reg_id);
+                TextView e_name = view.findViewById(R.id.eventname);
+                TextView e_id = view.findViewById(R.id.event_reg_id);
                 String eventname=e_name.getText().toString();
                 String event_reg_id=e_id.getText().toString();
 

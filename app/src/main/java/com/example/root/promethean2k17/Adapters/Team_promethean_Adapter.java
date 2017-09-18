@@ -71,9 +71,9 @@ public class Team_promethean_Adapter extends RecyclerView.Adapter<Team_promethea
         ProgressBar progressBar;
         public Team_prometheanViewHolder(View itemView) {
             super(itemView);
-            image= (CircularImageView) itemView.findViewById(R.id.team_promethean_img);
-            name= (TextView) itemView.findViewById(R.id.team_promethean_name);
-            progressBar= (ProgressBar) itemView.findViewById(R.id.progress);
+            image= itemView.findViewById(R.id.team_promethean_img);
+            name= itemView.findViewById(R.id.team_promethean_name);
+            progressBar= itemView.findViewById(R.id.progress);
         }
     }
 

@@ -28,13 +28,10 @@ RecyclerView recyclerView;
         setContentView(R.layout.activity_mba);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Mba Events");
-        recyclerView=(RecyclerView)findViewById(R.id.mba_recyclerview);
+        recyclerView= findViewById(R.id.mba_recyclerview);
 
         ArrayList<Mba_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Mba_Model(R.drawable.cse));
-        arrayList.add(new Mba_Model(R.drawable.cse));
-        arrayList.add(new Mba_Model(R.drawable.cse));
-        arrayList.add(new Mba_Model(R.drawable.cse));
+        arrayList.add(new Mba_Model("http://promethean2k17.com/app/images/comingsoon.jpg"));
         adapter=new Mba_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -46,17 +43,9 @@ RecyclerView recyclerView;
                 switch (position){
 
                     case 0:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
-                        break;
-                    case 2:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
-                        break;
-                    case 3:
-                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
-                        break;
+                        return;
+//                        startActivity(new Intent(getApplicationContext(),Event_Registration.class));
+
 
                 }
 
