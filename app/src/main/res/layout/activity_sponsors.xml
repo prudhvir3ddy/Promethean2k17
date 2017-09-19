@@ -5,7 +5,7 @@
     android:id="@+id/sponsors"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.root.promethean2k17.Activities.Sponsors">
+    tools:context="com.Promethean2k17.root.promethean2k17.Activities.Sponsors">
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/side_nav_bar"
-    tools:context="com.example.root.promethean2k17.Activities.user_details">
+    tools:context="com.Promethean2k17.root.promethean2k17.Activities.user_details">
 
     <!-- Login progress -->
 

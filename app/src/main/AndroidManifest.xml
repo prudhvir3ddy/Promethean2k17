@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.root.promethean2k17">
+    package="com.Promethean2k17.root.promethean2k17">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name=".configs.OneSignalInit"
+        android:name="com.Promethean2k17.root.promethean2k17.configs.OneSignalInit"
         android:allowBackup="true"
         android:icon="@drawable/promethean"
         android:label="@string/app_name"
@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -63,13 +63,13 @@
             android:theme="@style/AppLoginTheme"
             tools:replace="android:theme" />
         <activity
-            android:name=".Activities.Intro"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Intro"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Intro" />
         <activity
-            android:name=".Activities.MapsActivity"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Activities.Splash"
+        <activity android:name="com.Promethean2k17.root.promethean2k17.Activities.Splash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,90 +78,90 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.Login"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Login"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activities.user_details"
+        <activity android:name="com.Promethean2k17.root.promethean2k17.Activities.user_details"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Check"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Check"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Cse"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Cse"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Ece"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Ece"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Eee"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Eee"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Mech"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Mech"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Profile"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Profile"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.ELwebview"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.ELwebview"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.Event_Registration"
-            android:parentActivityName=".Activities.Home"
+        <activity android:name="com.Promethean2k17.root.promethean2k17.Activities.Event_Registration"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.About_promethean"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.About_promethean"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.RegisteredEvents"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.RegisteredEvents"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Phe"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Phe"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Civil"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Civil"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Bme"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Bme"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Mba"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Mba"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.It"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.It"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Chem"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Chem"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Sponsors"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Sponsors"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activities.Team_promethean"
-            android:parentActivityName=".Activities.Home"
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Team_promethean"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".Activities.Registered_Event_Indetail"
-            android:parentActivityName=".Activities.RegisteredEvents" />
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Registered_Event_Indetail"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.RegisteredEvents" />
         <activity
-            android:name=".Activities.Notifications"
-            android:parentActivityName=".Activities.Home" />
-        <activity android:name=".Activities.Notification_Expand"
-            android:parentActivityName=".Activities.Notifications"></activity>
+            android:name="com.Promethean2k17.root.promethean2k17.Activities.Notifications"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Home" />
+        <activity android:name="com.Promethean2k17.root.promethean2k17.Activities.Notification_Expand"
+            android:parentActivityName="com.Promethean2k17.root.promethean2k17.Activities.Notifications"></activity>
     </application>
 
 </manifest>

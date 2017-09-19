@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.root.promethean2k17.Activities.Check">
+    tools:context="com.Promethean2k17.root.promethean2k17.Activities.Check">
 
 </android.support.constraint.ConstraintLayout>

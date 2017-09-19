@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "com.example.root.promethean2k17"
+        applicationId "com.Promethean2k17.root.promethean2k17"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

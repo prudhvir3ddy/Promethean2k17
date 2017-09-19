@@ -4,7 +4,7 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=03:86:1C:06:47:90:0D:DD:C1:19:06:7E:1F:32:73:B9:73:AD:EE:2D%3Bcom.example.root.promethean2k17
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=C4:74:01:89:59:67:07:98:D0:4A:90:2D:5B:90:34:3F:C6:CA:B3:56%3Bcom.Promethean2k17.root.promethean2k17
 
     You can also add your credentials to an existing key, using these values:
 
@@ -21,6 +21,6 @@
     string in this file.
     -->
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-        AIzaSyBi6VlFbAWQyWIpDRGqbNMeUQ2l3SfZGAg
+         AIzaSyDLL2Au7nr_FSQrm0iz775vssTYWMfeSHQ
     </string>
 </resources>
