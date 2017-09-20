@@ -9,7 +9,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/side_nav_bar"
     tools:context="com.Promethean2k17.root.promethean2k17.Activities.user_details">
 
     <!-- Login progress -->
@@ -30,52 +29,52 @@
                 android:id="@+id/r1">
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@drawable/promethean"/>
+                    android:layout_height="wrap_content"
+                    android:id="@+id/introimage"/>
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:visibility="visible"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:foregroundGravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="First Name"
-                android:textColor="#fff"
-                android:textColorHint="#fff"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:singleLine="true" />
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/LastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Last Name"
-                android:textColor="#fff"
-                android:textColorHint="#fff"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:singleLine="true" />
 
 
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/Email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:textColorHint="#fff"
                 android:hint="Email"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:singleLine="true" />
 
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/CollegeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="College Name"
-                android:textColor="#fff"
-                android:textColorHint="#fff"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:singleLine="true" />
@@ -86,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="*FirstName,LastName and CollegeName are used in all Promethean'17 certification if eligible."
-                android:textColor="#ffffff"/>
+                />
 
 
 

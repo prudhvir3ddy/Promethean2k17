@@ -1,6 +1,7 @@
 package com.Promethean2k17.root.promethean2k17.Activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,6 +47,8 @@ public class Notification_Expand extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification__expand);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle("Notification Details");
         Bundle bundle=getIntent().getExtras();
         String heading = bundle.getString("heading");
         loadToast= new LoadToast(this);

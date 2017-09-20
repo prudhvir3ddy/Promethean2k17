@@ -69,7 +69,7 @@ Bme_Adapter adapter;
                         break;
                     case 4:
                         Intent i5=new Intent(getApplicationContext(),Event_Registration.class);
-                        i5.putExtra("name","SlideOverSlides");
+                        i5.putExtra("name","SlidOverSlides");
                         startActivity(i5);
                         break;
                     case 5:

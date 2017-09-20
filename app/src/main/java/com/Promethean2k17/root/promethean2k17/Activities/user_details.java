@@ -1,6 +1,7 @@
 package com.Promethean2k17.root.promethean2k17.Activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
@@ -22,6 +25,11 @@ import com.Promethean2k17.root.promethean2k17.R;
 import com.Promethean2k17.root.promethean2k17.configs.Connection;
 import com.Promethean2k17.root.promethean2k17.configs.Sharedprefs;
 import com.Promethean2k17.root.promethean2k17.configs.urls;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.facebook.accountkit.AccountKit;
 
 import net.steamcrafted.loadtoast.LoadToast;
@@ -43,12 +51,28 @@ EditText f_name,l_name,c_name,email;
     LoadToast loadToast;
      String formattedPhoneNumber;
     Sharedprefs sharedprefs;
+    ProgressBar progressBar;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_details);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle("Register");
+        progressBar=(ProgressBar)findViewById(R.id.progress);
+imageView=(ImageView)findViewById(R.id.introimage) ;
+        Glide.with(getApplicationContext()).load("http://promethean2k17.com/app/images/pro2.gif").diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
 
-
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        }).into(imageView);
         sharedprefs=new Sharedprefs(this);
 if(sharedprefs.getLogedInUserName()!=null)
     startActivity(new Intent(getApplicationContext(),Home.class));
@@ -250,6 +274,12 @@ if(sharedprefs.getLogedInUserName()!=null)
         matcher = pattern.matcher(name);
         return matcher.matches();
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -1,6 +1,7 @@
 package com.Promethean2k17.root.promethean2k17.Activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +41,8 @@ public class Registered_Event_Indetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registered_event_indetail);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle("RegisteredEvent Details");
         Bundle bundle = getIntent().getExtras();
         String eventname =bundle.getString("eventname");
         String event_reg_id =bundle.getString("event_reg_id");

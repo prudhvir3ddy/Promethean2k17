@@ -78,6 +78,7 @@ public class Sponsors extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray response) {
                         loadToast.success();
+                        Log.d("response:",""+response);
                         parsedata(response);
                     }
 

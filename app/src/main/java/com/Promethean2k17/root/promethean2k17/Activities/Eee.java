@@ -42,7 +42,7 @@ public class Eee extends AppCompatActivity {
         arrayList.add(new Eee_Model("http://promethean2k17.com/app/images/eee/circution.jpg"));
         arrayList.add(new Eee_Model("http://promethean2k17.com/app/images/ece/lab.jpg"));
         arrayList.add(new Eee_Model("http://promethean2k17.com/app/images/eee/greenpaper.jpg"));
-        arrayList.add(new Eee_Model("http://promethean2k17.com/app/images/ece/project.jpg"));
+        arrayList.add(new Eee_Model("http://promethean2k17.com/app/images/eee/project.jpg"));
         adapter=new Eee_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -115,7 +115,7 @@ public class Eee extends AppCompatActivity {
                         break;
                     case 12:
                         Intent i13=new Intent(getApplicationContext(),Event_Registration.class);
-                        i13.putExtra("name","ProjectExpo");
+                        i13.putExtra("name","ProjectExpoEEE");
                         startActivity(i13);
                         break;
 

@@ -35,7 +35,7 @@ Cse_Adapter adapter;
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/web.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/python.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/ibm.jpg"));
-        arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/papercse.jpg"));
+        arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/paper.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/poster.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/techmaze.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/codechef.jpg"));
@@ -45,6 +45,7 @@ Cse_Adapter adapter;
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/decoderace.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/readyplayer.jpg"));
         arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/coderunner.jpg"));
+        arrayList.add(new Cse_Model("http://promethean2k17.com/app/images/cse/mock.jpg"));
 
         adapter=new Cse_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -124,6 +125,10 @@ Cse_Adapter adapter;
                         i11.putExtra("name","CodeRunner");
                         startActivity(i11);
                         break;
+                    case 13:
+                        Intent i14=new Intent(getApplicationContext(),Event_Registration.class);
+                        i14.putExtra("name","MockInterviewCse");
+                        startActivity(i14);
 
                 }
 

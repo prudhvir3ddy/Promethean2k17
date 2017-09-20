@@ -56,9 +56,8 @@ public class RegisteredEvents extends AppCompatActivity {
         loadToast.setText("Loading...");
         connection=new Connection(getApplicationContext());
         sharedPrefs = new Sharedprefs(this);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
+
+
         String LogedInauthkey= sharedPrefs.getLogedInKey();
         String LogedInemail= sharedPrefs.getEmail();
         String LogedInusername= sharedPrefs.getLogedInUserName();
@@ -131,6 +130,7 @@ Log.d("phone",""+sharedPrefs.getPhone());
     public void parsedata(JSONArray array){
 
         int j = array.length();
+        Log.d("j",""+j);
         for (int i=j-1 ;i>=0;i--) {
             Registered_Events_Model model = new Registered_Events_Model();
             JSONObject json;
@@ -157,9 +157,13 @@ Log.d("phone",""+sharedPrefs.getPhone());
                 Toast.makeText(getApplicationContext(), "Please try again after sometime", Toast.LENGTH_SHORT).show();
             }
         }
-
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
         adapter = new Registered_Event_Adapter(list,this);
         recyclerView.setAdapter(adapter);
+
+
 
 
     }

@@ -4,6 +4,7 @@ package com.Promethean2k17.root.promethean2k17.Adapters;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +28,14 @@ public class Registered_Event_Adapter extends RecyclerView.Adapter<Registered_Ev
     public Registered_Event_Adapter(List<Registered_Events_Model> list, Context context){
         this.list=list;
         this.context=context;
+        Log.d("listsize:",""+list.size());
     }
 
     @Override
     public RegEvent_ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.registered_event_model, parent, false);
-        return new RegEvent_ViewHolder(v);
+        RegEvent_ViewHolder regEvent_viewHolder=new RegEvent_ViewHolder(v);
+        return  regEvent_viewHolder;
     }
 
     @Override

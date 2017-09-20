@@ -1,7 +1,14 @@
 package com.Promethean2k17.root.promethean2k17.Activities;
 
+import android.Manifest;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
 
 import com.Promethean2k17.root.promethean2k17.R;
 import com.google.android.gms.maps.CameraUpdate;
@@ -12,14 +19,20 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Map;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private static final int LOCATION_REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        requestPermission(Manifest.permission.ACCESS_FINE_LOCATION,
+                LOCATION_REQUEST_CODE);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -37,15 +50,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case LOCATION_REQUEST_CODE: {
+
+                if (grantResults.length == 0
+                        || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Unable to show location - permission required", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+        }
+    }
+
+    @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
-//        mMap.setMyLocationEnabled(true);
-
-
-        // Add a marker in Sydney and move the camera
         LatLng mainblock = new LatLng(17.725422, 78.257173);
         mMap.addMarker(new MarkerOptions().position(new LatLng(17.727496, 78.254606)).title("Bvrit out gate"));
         mMap.addMarker(new MarkerOptions().position(new LatLng(17.729512, 78.258218)).title("Bvrit in gate"));
@@ -69,8 +91,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(new LatLng(17.727174, 78.255681)).title("sports block"));
         mMap.addMarker(new MarkerOptions().position(new LatLng(17.725231, 78.257152)).title("ASSISTIVE TECHNOLOGY LAB"));
         mMap.addMarker(new MarkerOptions().position(new LatLng(17.723609, 78.255885)).title("BVRIT GIRLS HOSTEL"));
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(17.724750, 78.254712),18);
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(17.724750, 78.254712), 18);
         mMap.animateCamera(cameraUpdate);
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
     }
+    protected void requestPermission(String permissionType, int requestCode) {
+        int permission = ContextCompat.checkSelfPermission(this,
+                permissionType);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{permissionType}, requestCode
+            );
+        }
+    }
+
+
+        // Add a marker in Sydney and move the camera
+
+
+
 }

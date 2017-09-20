@@ -123,15 +123,11 @@ public class Event_Registration extends AppCompatActivity {
 //                   final int amount_to_pay=Integer.parseInt(no_of_prtcpnts)*Integer.parseInt(amount);
 //                    int amountoff=amount_to_pay/10;
 //                    int finalamount = amount_to_pay-amountoff;
-                    if(Integer.parseInt(no_of_prtcpnts)==1){
+
                         String msg ="Proceed to register for "+name+"? \n\n" +
-                                "Amount to be paid at the venue on the day of promethean'17.\n\n";
+                                "Amount to be paid at the venue on the day of promethean'17.(FOR TOTAL TEAM or as a Single Participant) \n\n";
                         proceedtoregister(name,msg );
-                    }else {
-                        String msg="Proceed to register for "+name+"? \n\n" +
-                                "Amount to be paid at the venue on the day of promethean'17  (FOR TOTAL TEAM) .\n\n";
-                        proceedtoregister(name,msg);
-                    }
+
 
 
                 }
@@ -247,11 +243,11 @@ public class Event_Registration extends AppCompatActivity {
 
         final String key = sharedPrefs.getLogedInKey();
         final String uname = sharedPrefs.getLogedInUserName();
-        String amount = price_per_head.getText().toString();
-        String no_of_prtcpnts =no_of_participants.getText().toString();
-        final int amount_to_pay=Integer.parseInt(no_of_prtcpnts)*Integer.parseInt(amount);
-        int amountoff=amount_to_pay/10;
-        int finalamount = amount_to_pay-amountoff;
+//        String amount = price_per_head.getText().toString();
+//        String no_of_prtcpnts =no_of_participants.getText().toString();
+//        final int amount_to_pay=Integer.parseInt(no_of_prtcpnts)*Integer.parseInt(amount);
+//        int amountoff=amount_to_pay/10;
+//        int finalamount = amount_to_pay-amountoff;
         final String referrerdetails=referrer.getText().toString();
         dialogBuilder
                 .withTitle(eventname)
@@ -276,9 +272,9 @@ public class Event_Registration extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         loadToast.show();
-                        String amount = String.valueOf(amount_to_pay);
+//                        String amount = String.valueOf(amount_to_pay);
                         // String email=sharedPrefs.getEmail();
-                        registerevent(key,uname,eventname,amount,referrerdetails);
+                        registerevent(key,uname,eventname,"",referrerdetails);
                     }
                 })
                 .show();
