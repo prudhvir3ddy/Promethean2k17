@@ -31,15 +31,15 @@ Civil_Adapter adapter;
 
         ArrayList<Civil_Model> arrayList = new ArrayList<>();
 
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/aakaar.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/sculpt.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/paper.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/model.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/techquiz.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/survey.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/nirman.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/nivaran.jpg"));
-        arrayList.add(new Civil_Model("http://promethean2k17.com/app/images/civil/mindchase.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/aakaar.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/sculpt.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/paper.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/model.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/techquiz.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/survey.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/nirman.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/nivaran.jpg"));
+        arrayList.add(new Civil_Model("http://23.92.25.213/promethean2k17/images/civil/mindchase.jpg"));
 
         adapter=new Civil_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());

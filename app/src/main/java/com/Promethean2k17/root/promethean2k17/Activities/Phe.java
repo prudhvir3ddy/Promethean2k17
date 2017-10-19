@@ -30,12 +30,12 @@ Phe_Adapter adapter;
         recyclerView= findViewById(R.id.phe_recyclerview);
 
         ArrayList<Phe_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/paper.jpg"));
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/poster.jpg"));
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/quiz.jpg"));
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/sherlock.jpg"));
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/nameplant.jpg"));
-        arrayList.add(new Phe_Model("http://promethean2k17.com/app/images/phe/pcao.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/paper.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/poster.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/quiz.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/sherlock.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/nameplant.jpg"));
+        arrayList.add(new Phe_Model("http://23.92.25.213/promethean2k17/images/phe/pcao.jpg"));
         adapter=new Phe_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

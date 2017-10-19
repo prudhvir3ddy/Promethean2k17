@@ -69,6 +69,7 @@ public class Check extends AppCompatActivity {
                                 .getAsJSONArray(new JSONArrayRequestListener() {
                                     @Override
                                     public void onResponse(JSONArray response) {
+                                        Log.d("response",""+response);
                                         loadToast.success();
                                         int j = response.length();
                                         for (int i = 0; i < j; i++) {
@@ -104,6 +105,7 @@ public class Check extends AppCompatActivity {
 
                                     @Override
                                     public void onError(ANError anError) {
+                                        Log.d("error",""+anError);
                                         loadToast.error();
                                     }
                                 });

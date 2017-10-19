@@ -30,7 +30,7 @@ RecyclerView recyclerView;
         recyclerView= findViewById(R.id.mba_recyclerview);
 
         ArrayList<Mba_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Mba_Model("http://promethean2k17.com/app/images/comingsoon.jpg"));
+        arrayList.add(new Mba_Model("http://23.92.25.213/promethean2k17/images/comingsoon.jpg"));
         adapter=new Mba_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

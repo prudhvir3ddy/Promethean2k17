@@ -3,6 +3,7 @@ package com.Promethean2k17.root.promethean2k17.Activities;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -30,7 +31,7 @@ TextView username,phonenumber,email,collegename;
         progressBar=(ProgressBar)findViewById(R.id.progress);
         sharedprefs=new Sharedprefs(this);
         imageView=(ImageView)findViewById(R.id.header_cover_image);
-        Glide.with(getApplicationContext()).load("http://promethean2k17.com/app/images/logo.jpg").diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
+        Glide.with(getApplicationContext()).load("http://23.92.25.213/promethean2k17/images/logo.jpg").diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
                 return false;
@@ -46,6 +47,7 @@ TextView username,phonenumber,email,collegename;
         phonenumber= findViewById(R.id.phonenumber);
         email= findViewById(R.id.email);
         collegename= findViewById(R.id.collegename);
+        Log.d("email",""+sharedprefs.getEmail());
         username.setText("username:- "+sharedprefs.getLogedInUserName());
         phonenumber.setText("Phonenumber:- "+sharedprefs.getPhone());
         email.setText("email:- "+sharedprefs.getEmail());

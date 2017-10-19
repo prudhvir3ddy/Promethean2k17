@@ -30,15 +30,15 @@ public class Mech extends AppCompatActivity {
         recyclerView= findViewById(R.id.mech_recyclerview);
 
         ArrayList<Mech_Model> arrayList = new ArrayList<>();
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/mechanograsp.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/automobile.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/paper.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/poster.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/quiz.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/project.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/nitro.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/minute.jpg"));
-        arrayList.add(new Mech_Model("http://promethean2k17.com/app/images/mech/cad.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/mechanograsp.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/automobile.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/paper.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/poster.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/quiz.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/project.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/nitro.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/minute.jpg"));
+        arrayList.add(new Mech_Model("http://23.92.25.213/promethean2k17/images/mech/cad.jpg"));
         adapter=new Mech_Adapter(arrayList,this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

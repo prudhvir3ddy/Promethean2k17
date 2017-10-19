@@ -61,7 +61,7 @@ EditText f_name,l_name,c_name,email;
         actionBar.setTitle("Register");
         progressBar=(ProgressBar)findViewById(R.id.progress);
 imageView=(ImageView)findViewById(R.id.introimage) ;
-        Glide.with(getApplicationContext()).load("http://promethean2k17.com/app/images/pro2.gif").diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
+        Glide.with(getApplicationContext()).load("http://23.92.25.213/promethean2k17/images/pro2.gif").diskCacheStrategy(DiskCacheStrategy.SOURCE).error(android.R.drawable.ic_dialog_alert).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
                 return false;

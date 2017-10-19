@@ -7,8 +7,8 @@ android {
         applicationId "com.Promethean2k17.root.promethean2k17"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
                                 onesignal_app_id               : "908d7a9e-524d-4e97-b3b5-b9a519779d4e",
